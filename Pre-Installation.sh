@@ -7,6 +7,8 @@ dd if=/dev/zero of=/dev/sda bs=64K status=progress
 sync
 curl "https://archlinux.org/mirrorlist/?country=US&protocol=https&ip_version=4&use_mirror_status=on" >> mirrorlist
 mv mirrorlist /etc/pacman.d/mirrorlist
+sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist
+pacman -Syy
 cfdisk /dev/sda
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
