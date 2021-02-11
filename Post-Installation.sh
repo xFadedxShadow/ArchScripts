@@ -13,6 +13,4 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable bluetooth
-useradd -mG wheel xfadedxshadow
-passwd xfadedxshadow
 EDITOR=nano visudo
