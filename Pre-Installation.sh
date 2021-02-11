@@ -15,5 +15,5 @@ mkfs.ext4 /dev/sda2
 mount /dev/sda2 /mnt
 mkdir -p /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
-pacstrap /mnt base linux-zen linux-firmware nano intel-ucode
+pacstrap /mnt base linux-zen linux-firmware nano
 genfstab -U /mnt >> /mnt/etc/fstab
